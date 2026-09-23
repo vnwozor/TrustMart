@@ -1,0 +1,43 @@
+/* Design tokens. Colors flip in dark mode; brand colors stay put. */
+:root {
+  --surface: #f3f5f1;
+  --surface-2: #ffffff;
+  --text: #0f1f17;
+  --muted: #4b5a51;
+  --line: #dde4db;
+  --tint: #e3f4ea;
+
+  --forest: #083f2b;
+  --brand: #0f8a56;
+  --lime: #cdf27e;
+
+  --font-display: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --gutter: 20px;
+  --max: 1080px;
+  --header-h: 68px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --surface: #0b1610;
+    --surface-2: #12231a;
+    --text: #eaf1eb;
+    --muted: #a3b3a9;
+    --line: #23382c;
+    --tint: #16301f;
+  }
+}
+:root[data-theme='dark'] {
+  --surface: #0b1610;
+  --surface-2: #12231a;
+  --text: #eaf1eb;
+  --muted: #a3b3a9;
+  --line: #23382c;
+  --tint: #16301f;
+}
+
+@media (min-width: 640px) {
+  :root { --gutter: 32px; }
+}

@@ -1,0 +1,14 @@
+h2 + .voices { margin-top: 44px; }
+.voices { display: grid; gap: 18px; margin-bottom: 40px; }
+.say { background: var(--surface-2); border-radius: 28px; padding: 26px; display: grid; gap: 12px; }
+.say small { color: var(--muted); font-weight: 600; font-size: 15px; }
+.say p { font-family: var(--font-display); font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.03em; line-height: 1.08; font-weight: 700; }
+.say--buyer { border-bottom-left-radius: 6px; }
+.say--seller { border-bottom-right-radius: 6px; }
+.voices__mid { display: grid; place-items: center; }
+.voices__mark { width: 64px; height: 64px; }
+.punch { font-family: var(--font-display); font-size: clamp(28px, 5.4vw, 56px); letter-spacing: -0.04em; line-height: 1.02; font-weight: 750; max-width: 20ch; }
+
+@media (min-width: 760px) {
+  .voices { grid-template-columns: 1fr auto 1fr; align-items: center; }
+}

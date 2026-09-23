@@ -1,0 +1,19 @@
+.hero { background: var(--forest); color: #fff; overflow: hidden; padding-block: clamp(40px, 8vw, 96px) clamp(56px, 9vw, 120px); }
+.hero__grid { display: grid; gap: 40px; align-items: center; }
+.hero__title { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.055em; line-height: 0.92; font-size: clamp(44px, 12vw, 116px); overflow-wrap: break-word; }
+.hero .lead { margin: 22px 0 30px; }
+.hero__mark { justify-self: center; width: min(70vw, 340px); height: auto; }
+
+/* The one entrance: the two shapes slide together, then the deal lights up. */
+.mark-a { animation: mark-from-left 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.mark-b { animation: mark-from-right 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.mark-m { animation: mark-fade 0.5s 0.85s ease-out both; }
+@keyframes mark-from-left { from { transform: translateX(-22px); } to { transform: none; } }
+@keyframes mark-from-right { from { transform: translateX(22px); } to { transform: none; } }
+@keyframes mark-fade { from { opacity: 0; } to { opacity: 1; } }
+
+@media (min-width: 860px) {
+  .hero__grid { grid-template-columns: 1.35fr 1fr; gap: 56px; }
+  .hero__title { font-size: clamp(64px, 8.2vw, 116px); }
+  .hero__mark { width: min(100%, 400px); }
+}

@@ -1,0 +1,18 @@
+/* Promises and FAQ */
+.promises { margin-top: 40px; }
+.promises p { font-family: var(--font-display); font-size: clamp(24px, 4.2vw, 44px); letter-spacing: -0.035em; line-height: 1.08; font-weight: 700; padding: 26px 0; border-top: 1px solid var(--line); max-width: 28ch; }
+.promises p:last-child { border-bottom: 1px solid var(--line); }
+
+.faq { padding-top: 0; }
+.faq__list { margin-top: 36px; }
+details { border-top: 1px solid var(--line); }
+details:last-child { border-bottom: 1px solid var(--line); }
+summary { list-style: none; cursor: pointer; padding: 22px 0; font-weight: 650; font-size: 20px; display: flex; justify-content: space-between; gap: 16px; align-items: center; min-height: 64px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; font-size: 28px; font-weight: 400; color: var(--brand); transition: transform 0.2s; flex: none; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--muted); padding: 0 0 24px; max-width: 56ch; }
+
+@media (min-width: 960px) {
+  .faq__list { max-width: 820px; }
+}
