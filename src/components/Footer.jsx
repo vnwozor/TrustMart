@@ -12,6 +12,7 @@ export default function Footer() {
         </nav>
         <span>Buy with confidence.</span>
       </div>
+      <p className="container footer__legal">TrustMart is operated by TRUSTMART DIGITAL VENTURES LTD (RC 9931691), registered in Nigeria.</p>
     </footer>
   )
 }
